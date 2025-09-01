@@ -272,6 +272,8 @@ class TfidfClassifier:
     def save(self) -> None:
         if self.clf is None:
             raise ValueError("You need to fit the model first.")
+        if not os.path.exists(MODEL_PATH):
+            os.makedirs(MODEL_PATH, exist_ok=True)
 
         model_path = MODEL_PATH / self.model_name
         joblib.dump(self.clf, model_path)
@@ -343,6 +345,8 @@ class EmbeddingXGBoostModel:
     def save(self) -> None:
         if self.clf is None:
             raise ValueError("You need to fit the model first.")
+        if not os.path.exists(MODEL_PATH):
+            os.makedirs(MODEL_PATH, exist_ok=True)
 
         model_path = MODEL_PATH / self.model_name
         joblib.dump(self.clf, model_path)
