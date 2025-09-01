@@ -17,7 +17,6 @@ def amurd_pipeline():
         translation_model_config_path=OPUS_TRANSLATION_CONFIG_PATH,
         tfidf_classifier_config_path=TFIDF_CLASSIFIER_CONFIG_PATH
     )
-    # pipe.process_dataframe(pipe.df_train, "train")
     pipe.run_pipeline()
 
 def gpc_pipeline():
@@ -29,7 +28,6 @@ def gpc_pipeline():
         translation_model_config_path=OPUS_TRANSLATION_CONFIG_PATH,
         tfidf_classifier_config_path=TFIDF_CLASSIFIER_CONFIG_PATH
     )
-    # pipe.process_dataframe(pipe.df_train, "train")
     pipe.run_pipeline()
 
 def main():

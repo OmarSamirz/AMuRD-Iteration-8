@@ -92,13 +92,13 @@ def main():
     # --- PRODUCT LIST ---
     st.markdown("#### Product Table")
     edited_df = st.data_editor(
-        df[["product_name", "Select"]],
+        df[["translated_product_name", "Select"]],
         hide_index=True,
         use_container_width=True,
         num_rows="fixed"
     )
 
-    selected_rows = edited_df[edited_df["Select"] == True]["product_name"].tolist()
+    selected_rows = edited_df[edited_df["Select"] == True]["translated_product_name"].tolist()
     selected_product = selected_rows[0] if selected_rows else None
 
     if selected_product:

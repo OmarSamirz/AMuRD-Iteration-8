@@ -4,7 +4,6 @@ from typing_extensions import override
 from typing import Optional, List, Union, Dict, Any
 
 from modules.logger import logger
-from constants import MODEL_PATH
 from modules.pipelines.pipeline import Pipeline
 from queries import (
     create_table_query,

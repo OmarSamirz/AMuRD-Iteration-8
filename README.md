@@ -1,8 +1,5 @@
 # Prodify
 
-
-conda create -n iteration8 python=3.12
-
 ## Setup for Development
 
 ### Conda Environment
@@ -68,12 +65,3 @@ streamlit run ./src/app.py
 ```python
 conda run --live-stream --name iteration8 python ./src/main.py
 ```
-
-This runs the complete classification pipeline:
-1. **Data Insertion**: Load products and classes into Teradata
-2. **Text Cleaning**: Clean and normalize product/class names
-3. **Translation**: Translate Arabic products to English
-4. **Embedding Generation**: Create vector embeddings for products and classes
-5. **Classification**: Perform similarity-based classification using Teradata vector functions
-6. **Evaluation**: Calculate F1-score and display results
-
