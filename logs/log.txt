@@ -1,0 +1,100 @@
+[2025-09-01 20:10:54] - logger:_log - INFO - Logger initialized. Logs will be saved to C:\internship\AMuRD-Iteration-8\logs\log.txt
+[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - matplotlib data path: C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\matplotlib\mpl-data
+[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - CONFIGDIR=C:\Users\os255022\.matplotlib
+[2025-09-01 20:11:04] - __init__:<module> - DEBUG - interactive is False
+[2025-09-01 20:11:04] - __init__:<module> - DEBUG - platform is win32
+[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - CACHEDIR=C:\Users\os255022\.matplotlib
+[2025-09-01 20:11:04] - font_manager:_load_fontmanager - DEBUG - Using fontManager instance from C:\Users\os255022\.matplotlib\fontlist-v390.json
+[2025-09-01 20:11:23] - logger:_log - INFO - TeradataDatabase instance initialized
+[2025-09-01 20:11:23] - logger:_log - INFO - Operation 'Database connection' started - Details: {'host': 'iteration8-y5i5r3hcc15faku7.env.clearscape.teradata.com', 'database': 'demo_user'}
+[2025-09-01 20:11:28] - logger:_log - INFO - Operation 'Database connection' completed
+[2025-09-01 20:11:28] - logger:_log - INFO - Loading a CSV file of path `c:\internship\AMuRD-Iteration-8\data\train_val.csv`.
+[2025-09-01 20:11:28] - logger:_log - INFO - Loading a CSV file of path `c:\internship\AMuRD-Iteration-8\data\test.csv`.
+[2025-09-01 20:11:28] - logger:_log - INFO - Running the Amurd Pipeline.
+[2025-09-01 20:11:28] - logger:_log - INFO - Starting to evaluate embedding model.
+[2025-09-01 20:11:28] - logger:_log - INFO - Loading the embedding model
+[2025-09-01 20:11:28] - logger:_log - INFO - Loading embedding model.
+[2025-09-01 20:11:28] - SentenceTransformer:__init__ - INFO - Load pretrained SentenceTransformer: intfloat/multilingual-e5-large-instruct
+[2025-09-01 20:11:28] - connectionpool:_new_conn - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/README.md HTTP/1.1" 307 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/README.md HTTP/1.1" 200 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_bert_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_roberta_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_distilbert_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_camembert_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_albert_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_xlm-roberta_config.json HTTP/1.1" 307 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/sentence_xlm-roberta_config.json HTTP/1.1" 200 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/adapter_config.json HTTP/1.1" 404 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config.json HTTP/1.1" 307 0
+[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config.json HTTP/1.1" 200 0
+[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/tokenizer_config.json HTTP/1.1" 200 0
+[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct HTTP/1.1" 200 287673
+[2025-09-01 20:11:34] - logger:_log - INFO - Loading embeddings model is done.
+[2025-09-01 20:11:34] - logger:_log - INFO - Creating a new table `similarity_score` with columns `['product_id', 'class_id', 'cosine_distance']` on database `demo_user`.
+[2025-09-01 20:11:34] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': 'CREATE TABLE similarity_score (product_id BIGINT, class_id BIGINT, cosine_distance FLOAT);'}
+[2025-09-01 20:11:35] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:11:35] - logger:_log - INFO - Add classification to table `similarity_score`
+[2025-09-01 20:11:35] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    INSERT INTO similarity_score\n    WITH RankedDistances AS (\n        SELECT\n            o.Target_...'}
+[2025-09-01 20:12:13] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:20] - logger:_log - INFO - A sample from `similarity_score`:
+   product_id  class_id  cosine_distance
+0           2        15         0.160539
+1           8         3         0.117435
+2           1        15         0.153142
+3           3        40         0.147684
+4          11        21         0.203817
+[2025-09-01 20:12:20] - logger:_log - INFO - Create a new table `results`.
+[2025-09-01 20:12:20] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.results AS (\n        SELECT\n            p.id AS product_id,\n            ...'}
+[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': 'SELECT COUNT(class_name) FROM demo_user.classes'}
+[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 1}
+[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    SELECT * FROM TD_ClassificationEvaluator (\n    ON results AS InputTable\n    OUT PERMANENT TABLE...'}
+[2025-09-01 20:12:22] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:25] - logger:_log - INFO - The scores of the model:
+   SeqNum              Metric  MetricValue
+0       1            Accuracy     0.323260
+1       2     Micro-Precision     0.323260
+2       3        Micro-Recall     0.323260
+3       4            Micro-F1     0.323260
+4       5     Macro-Precision     0.230708
+5       6        Macro-Recall     0.286951
+6       7            Macro-F1     0.160303
+7       8  Weighted-Precision     0.584377
+8       9     Weighted-Recall     0.323260
+9      10         Weighted-F1     0.376518
+[2025-09-01 20:12:25] - logger:_log - INFO - Evaluating embedding model is completed.
+[2025-09-01 20:12:25] - logger:_log - INFO - Evaluating tfidf classifier model.
+[2025-09-01 20:12:25] - logger:_log - INFO - Loading tfidf classifier model.
+[2025-09-01 20:12:25] - logger:_log - INFO - Loading tfidf classifier model is done.
+[2025-09-01 20:12:25] - logger:_log - INFO - Merging column(s) `product_id, class_name` of table `actual_classes_train` with column(s) `id` of table `classes`.
+[2025-09-01 20:12:25] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.actual_classes_train_new AS (\n        SELECT actual_classes_train.produc...'}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    DROP TABLE demo_user.actual_classes_train;'}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    RENAME TABLE demo_user.actual_classes_train_new TO actual_classes_train;'}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    ;'}
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:26] - logger:_log - INFO - Merging column(s) `product_id, class_name` of table `actual_classes_test` with column(s) `id` of table `classes`.
+[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.actual_classes_test_new AS (\n        SELECT actual_classes_test.product_...'}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    DROP TABLE demo_user.actual_classes_test;'}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    RENAME TABLE demo_user.actual_classes_test_new TO actual_classes_test;'}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    ;'}
+[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
+[2025-09-01 20:12:42] - logger:_log - INFO - Training the model.
