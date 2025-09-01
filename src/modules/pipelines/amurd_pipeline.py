@@ -336,13 +336,6 @@ class AmurdPipeline(Pipeline):
             "class_name"
         )
 
-        # train_table_name = self.combine_db_table_names(train_table_name)
-        # train_labels_table_name = self.combine_db_table_names(train_labels_table_name)
-        # test_table_name = self.combine_db_table_names(test_table_name)
-        # test_labels_table_name = self.combine_db_table_names(test_labels_table_name)
-        # train_classes_id_table_name = self.combine_db_table_names(train_classes_id_table_name)
-        # test_classes_id_table_name = self.combine_db_table_names(test_classes_id_table_name)
-
         df_train = self.get_table(train_table_name)
         df_train_labels = self.get_table(train_labels_table_name)
         X_train = df_train["translated_product_name"].tolist()
@@ -365,7 +358,7 @@ class AmurdPipeline(Pipeline):
         })
         self.database_insertion(df_pred, "tfidf_predictions")
 
-        num_labels = self.count_table_rows(classes_table_name, "id") + 1
+        num_labels = self.count_table_rows(classes_table_name, "id")
         self.execute_query(
             scores_query(
                 "tfidf_predictions",
@@ -375,7 +368,7 @@ class AmurdPipeline(Pipeline):
                 num_labels
             )
         )
-        df_scores = self.get_table("demo_user.tfidf_predictions")
+        df_scores = self.get_table("tfidf_scores")
         logger.info(f"The scores of tfidf classifer model: {df_scores}")
 
         self.tfidf_classifier.save()
@@ -488,6 +481,6 @@ class AmurdPipeline(Pipeline):
             "class_name"
         )
 
-        self.evaluate_tfidf_model("products_train", "actual_classes_train", "products_test", "actual_classes_test", "classes")
+        self.evaluate_tfidf_model("products_train", "actual_classes_train", "products_test", "actual_classes_test", "classes_test")
 
         logger.info("Running the Amurd Pipeline is done.")
