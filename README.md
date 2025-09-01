@@ -56,12 +56,13 @@ pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https
 
 ## How to Run
 
-### Run the app
-```python
-streamlit run ./src/app.py
-```
-
 ### Run pipeline
 ```python
 conda run --live-stream --name iteration8 python ./src/main.py
+```
+
+### Run the app
+#### You need to make sure that the model is there to run the app
+```python
+streamlit run ./src/app.py
 ```
