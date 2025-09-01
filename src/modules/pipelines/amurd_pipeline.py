@@ -431,47 +431,47 @@ class AmurdPipeline(Pipeline):
     @override
     def run_pipeline(self) -> None:
         logger.info("Running the Amurd Pipeline.")
-        # self.process_dataframe(self.df_train, "train")
-        # if self.df_val is not None:
-        #     self.process_dataframe(self.df_val, "val")
-        #     self.delete_rows_not_in_source("classes_val", "classes_train", "class_name", "class_name")
-        #     self.update_table_columns("classes_val", "classes_train", "id", "id", "class_name", "class_name")
-        #     self.delete_rows_not_in_source("actual_classes_val", "actual_classes_train", "class_name", "class_name")
-        #     self.delete_rows_not_in_source("products_val", "actual_classes_val", "product_id", "id")
-        #     self.update_id("products_val", "id", "product_name")
-        # if self.df_test is not None:
-        #     self.process_dataframe(self.df_test, "test")
-        #     self.delete_rows_not_in_source("classes_test", "classes_train", "class_name", "class_name")
-        #     self.update_table_columns("classes_test", "classes_train", "id", "id", "class_name", "class_name")
-        #     self.delete_rows_not_in_source("actual_classes_test", "actual_classes_train", "class_name", "class_name")
-        #     self.delete_rows_not_in_source("products_test", "actual_classes_test", "product_id", "id")
-        #     self.update_id("products_test", "id", "product_name")
-        
-        # self.concatenate_tables("products", "*")
-        # self.create_table_from("classes", "classes_train", "*")
+        self.process_dataframe(self.df_train, "train")
+        if self.df_val is not None:
+            self.process_dataframe(self.df_val, "val")
+            self.delete_rows_not_in_source("classes_val", "classes_train", "class_name", "class_name")
+            self.update_table_columns("classes_val", "classes_train", "id", "id", "class_name", "class_name")
+            self.delete_rows_not_in_source("actual_classes_val", "actual_classes_train", "class_name", "class_name")
+            self.delete_rows_not_in_source("products_val", "actual_classes_val", "product_id", "id")
+            self.update_id("products_val", "id", "product_name")
+        if self.df_test is not None:
+            self.process_dataframe(self.df_test, "test")
+            self.delete_rows_not_in_source("classes_test", "classes_train", "class_name", "class_name")
+            self.update_table_columns("classes_test", "classes_train", "id", "id", "class_name", "class_name")
+            self.delete_rows_not_in_source("actual_classes_test", "actual_classes_train", "class_name", "class_name")
+            self.delete_rows_not_in_source("products_test", "actual_classes_test", "product_id", "id")
+            self.update_id("products_test", "id", "product_name")
 
-        # self.update_id("products", "id", "product_name", ["product_name", "df_type"])
-        # self.update_table_columns("products_train", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
+        self.concatenate_tables("products", "*")
+        self.create_table_from("classes", "classes_train", "*")
 
-        # self.concatenate_tables("actual_classes", "*")
-        # self.update_table_columns("actual_classes", "products_train", "product_id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
-        # self.update_table_columns("actual_classes", "products_test", "product_id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
-        # self.update_table_columns("actual_classes_train", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
+        self.update_id("products", "id", "product_name", ["product_name", "df_type"])
+        self.update_table_columns("products_train", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
 
-        # self.translate_data("products", "product_name", "translated_product_name")
-        # self.merge_table_columns("products_train", "products", "*", "translated_product_name", "id", "id")
+        self.concatenate_tables("actual_classes", "*")
+        self.update_table_columns("actual_classes", "products_train", "product_id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
+        self.update_table_columns("actual_classes", "products_test", "product_id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
+        self.update_table_columns("actual_classes_train", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
 
-        # if self.df_val is not None:
-        #     self.update_table_columns("products_val", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
-        #     self.update_table_columns("actual_classes_val", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
-        #     self.merge_table_columns("products_val", "products", "*", "translated_product_name", "id", "id")
-        # if self.df_test is not None:
-        #     self.update_table_columns("products_test", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
-        #     self.update_table_columns("actual_classes_test", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
-        #     self.merge_table_columns("products_test", "products", "*", "translated_product_name", "id", "id")
+        self.translate_data("products", "product_name", "translated_product_name")
+        self.merge_table_columns("products_train", "products", "*", "translated_product_name", "id", "id")
 
-        # self.create_embeddings("products", "translated_product_name", "product_embeddings")
-        # self.create_embeddings("classes", "class_name", "class_embeddings")
+        if self.df_val is not None:
+            self.update_table_columns("products_val", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
+            self.update_table_columns("actual_classes_val", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
+            self.merge_table_columns("products_val", "products", "*", "translated_product_name", "id", "id")
+        if self.df_test is not None:
+            self.update_table_columns("products_test", "products", "id", "id", ["product_name", "df_type"], ["product_name", "df_type"])
+            self.update_table_columns("actual_classes_test", "actual_classes", "product_id", "product_id", ["product_name", "df_type"], ["product_name", "df_type"])
+            self.merge_table_columns("products_test", "products", "*", "translated_product_name", "id", "id")
+
+        self.create_embeddings("products", "translated_product_name", "product_embeddings")
+        self.create_embeddings("classes", "class_name", "class_embeddings")
 
         self.evaluate_embedding_model(
             "similarity_score",

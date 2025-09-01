@@ -1,6 +1,7 @@
 accelerate
 teradataml
 numpy
+typing-extensions
 pandas
 matplotlib
 scikit-learn
