@@ -326,15 +326,10 @@ class EmbeddingXGBoostModel:
         )
         self.clf = None
 
-    def fit(self, X_train, y_train) -> bool:
-        if os.path.exists(MODEL_PATH / self.model_name):
-            return True
-
+    def fit(self, X_train, y_train):
         embeddings = self.embedding_model.get_embeddings(X_train)
         self.clf = MultiOutputClassifier(self.xgb_model)
         self.clf.fit(embeddings, y_train)
-
-        return False
 
     def predict(self, x):
         embeddings = self.embedding_model.get_embeddings(x)
