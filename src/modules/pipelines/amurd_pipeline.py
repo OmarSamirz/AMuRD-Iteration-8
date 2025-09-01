@@ -355,7 +355,7 @@ class AmurdPipeline(Pipeline):
         df_test = self.get_table(test_table_name)
         df_test_labels = self.get_table(test_labels_table_name)
         X_test = df_test["translated_product_name"].tolist()
-        y_test = df_test_labels["class_name"].tolist()
+        y_test = df_test_labels["id"].tolist()
 
         logger.info("Testing the model.")
         y_pred = self.tfidf_classifier.predict(X_test)
