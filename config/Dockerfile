@@ -12,9 +12,10 @@ RUN apt-get update && apt-get install -y python3.12 python3.12-venv python3.12-d
 WORKDIR /src
 
 # Copy requirements first (better caching)
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+COPY requirements.txt .
+RUN pip install -r requirements.txt && \
+    pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 \
+      --index-url https://download.pytorch.org/whl/cu118
 
 # Copy source
 COPY src/ /src/

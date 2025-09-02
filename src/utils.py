@@ -189,8 +189,10 @@ def save_model(model: GpcHierarchicalClassifier) -> None:
 
     save_file(state_dict, model_path)
 
-def classify_product(agent, translation_model, product_name: str):
+def classify_product(product_name: str, agent, translation_model = None):
     """Translate and classify product using the agent."""
-    translated_name = translation_model.translate(product_name).lower()
-    result = agent.invoke({"product_description": translated_name})
+    if translation_model is not None:
+        product_name = translation_model.translate(product_name).lower()
+        
+    result = agent.invoke({"product_description": product_name})
     return result

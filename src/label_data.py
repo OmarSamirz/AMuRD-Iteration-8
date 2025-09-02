@@ -3,34 +3,34 @@ from tqdm.auto import tqdm
 
 from gpc_agent import build_graph
 from utils import classify_product, load_translation_model
-from constants import SAMPLE_PRODUCTS_PATH, OPUS_TRANSLATION_CONFIG_PATH, LABELED_PRODUCTS_PATH
+from constants import LABELED_GPC_PATH
 
 
-def label_products(df, agent, translation_model):
+def label_products(df, product_col, agent, translation_model = None):
     segment_lst = family_lst = class_lst = brick_lst = []
     
     for _, row in tqdm(df.iterrows(), total=len(df)):
-        result = classify_product(agent, translation_model, row["product_name"])
+        result = classify_product(row[product_col], agent, translation_model)
         segment_lst.append(result["segment"])
         family_lst.append(result["family"])
         class_lst.append(result["class_"])
         brick_lst.append(result["brick"])
 
-    df["segment"] = segment_lst
-    df["family"] = family_lst
-    df["class"] = class_lst
-    df["brick"] = brick_lst
+    df["segment_pred"] = segment_lst
+    df["family_pred"] = family_lst
+    df["class_pred"] = class_lst
+    df["brick_pred"] = brick_lst
 
     return df
 
 def main():
-    translation_model = load_translation_model(OPUS_TRANSLATION_CONFIG_PATH)
+    # translation_model = load_translation_model(OPUS_TRANSLATION_CONFIG_PATH)
     agent = build_graph()
 
-    df_sample = pd.read_csv(SAMPLE_PRODUCTS_PATH)
-    df_labeled = label_products(df_sample, agent, translation_model)
+    df_sample = pd.read_csv(LABELED_GPC_PATH)
+    df_labeled = label_products(df_sample, "translated_name", agent)
 
-    df_labeled.to_csv(LABELED_PRODUCTS_PATH, index=False, encoding="utf-8-sig")
+    df_labeled.to_csv(LABELED_GPC_PATH, index=False, encoding="utf-8-sig")
 
 if __name__ == "__main__":
     main()

@@ -8,6 +8,7 @@ import json
 from typing import Dict
 from dataclasses import dataclass
 
+from modules.logger import logger
 from modules.db import TeradataDatabase
 from utils import load_translation_model
 from constants import OPUS_TRANSLATION_CONFIG_PATH
@@ -23,7 +24,13 @@ from constants import OPUS_TRANSLATION_CONFIG_PATH
 
 
 MODEL_NAME = "unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit"
-llm = LLM(model=MODEL_NAME)
+model = LLM(
+    model=MODEL_NAME,
+    dtype="bfloat16",
+    max_num_seqs=8,
+    gpu_memory_utilization=0.8,
+    max_model_len=10240,
+)
 
 td_db = TeradataDatabase()
 td_db.connect()
@@ -47,31 +54,31 @@ def classify_node(text, candidates):
     Example 1:
     Input:
     {
-    "product_description": "Chicken Breasts (0.5Kg)",
-    "segment": "Food/Beverage",
-    "family": "Meat/Poultry/Other Animals",
-    "class_": "Meat/Poultry/Other Animals - Unprepared/Unprocessed",
-    "brick": "Alternative Meat/Poultry/Other Animal Species - Unprepared/Unprocessed"
+        "product_description": "Chicken Breasts (0.5Kg)",
+        "segment": "Food/Beverage",
+        "family": "Meat/Poultry/Other Animals",
+        "class_": "Meat/Poultry/Other Animals - Unprepared/Unprocessed",
+        "brick": "Alternative Meat/Poultry/Other Animal Species - Unprepared/Unprocessed"
     }
 
     Example 2:
     Input:
     {
-    "product_description": "Indian Menshawi Mango (0.5Kg)",
-    "segment": "Food/Beverage",
-    "family": "Fruits - Unprepared/Unprocessed (Fresh)",
-    "class_": "Fruits - Unprepared/Unprocessed (Fresh) Variety Packs",
-    "brick": "Fruits - Unprepared/Unprocessed (Fresh) Variety Packs"
+        "product_description": "Indian Menshawi Mango (0.5Kg)",
+        "segment": "Food/Beverage",
+        "family": "Fruits - Unprepared/Unprocessed (Fresh)",
+        "class_": "Fruits - Unprepared/Unprocessed (Fresh) Variety Packs",
+        "brick": "Fruits - Unprepared/Unprocessed (Fresh) Variety Packs"
     }
 
     Example 3:
     Input:
     {
-    "product_description": "bonomi cocoa butter biscuits - 150 g",
-    "segment": "Food/Beverage",
-    "family": "Bread/Bakery Products",
-    "class_": "Biscuits/Cookies",
-    "brick": "Biscuits/Cookies (Shelf Stable)"
+        "product_description": "bonomi cocoa butter biscuits - 150 g",
+        "segment": "Food/Beverage",
+        "family": "Bread/Bakery Products",
+        "class_": "Biscuits/Cookies",
+        "brick": "Biscuits/Cookies (Shelf Stable)"
     }
     """
     prompt = (
@@ -96,12 +103,15 @@ def classify_node(text, candidates):
         "If none fit, select the closest, set confidence below 0.5, and explain in reasoning."
     )
 
-    sampling_params = SamplingParams(
-        temperature=0.0,   # deterministic
-        max_tokens=100,    # like max_new_tokens
-    )
+    # inputs = tokenizer(prompt, return_tensors="pt").to(model.device) 
+    # output_ids = model.generate(**inputs, max_new_tokens=100)[0][len(inputs.input_ids[0]):] 
+    # output_text = tokenizer.decode(output_ids, skip_special_tokens=True).strip()
 
-    outputs = llm.generate([prompt], sampling_params)
+    sampling_params = SamplingParams(
+        temperature=0.0,
+        max_tokens=100,
+    )
+    outputs = model.generate([prompt], sampling_params)
     output_text = outputs[0].outputs[0].text.strip()
 
     try:
@@ -112,6 +122,7 @@ def classify_node(text, candidates):
         for c in candidates:
             if c.lower() in output_text_lower:
                 return c
+        logger.info(f"The model did not choose from the list output text: {output_text}")
         return candidates[0] 
 
 def segment_node(state):

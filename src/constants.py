@@ -40,6 +40,8 @@ GPC_TRAIN_PATH = DATA_PATH / "gpc_train.csv"
 
 CLEANED_GPC_PATH = DATA_PATH / "cleaned_gpc.csv"
 
+LABELED_GPC_PATH = DATA_PATH / "gpc_labeled.csv"
+
 SAMPLE_PRODUCTS_PATH = DATA_PATH / "products_sample.csv"
 
 LABELED_PRODUCTS_PATH = DATA_PATH / "labeled_products.csv"
