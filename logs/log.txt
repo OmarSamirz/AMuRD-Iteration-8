@@ -1,100 +1,74 @@
-[2025-09-01 20:10:54] - logger:_log - INFO - Logger initialized. Logs will be saved to C:\internship\AMuRD-Iteration-8\logs\log.txt
-[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - matplotlib data path: C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\matplotlib\mpl-data
-[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - CONFIGDIR=C:\Users\os255022\.matplotlib
-[2025-09-01 20:11:04] - __init__:<module> - DEBUG - interactive is False
-[2025-09-01 20:11:04] - __init__:<module> - DEBUG - platform is win32
-[2025-09-01 20:11:04] - __init__:wrapper - DEBUG - CACHEDIR=C:\Users\os255022\.matplotlib
-[2025-09-01 20:11:04] - font_manager:_load_fontmanager - DEBUG - Using fontManager instance from C:\Users\os255022\.matplotlib\fontlist-v390.json
-[2025-09-01 20:11:23] - logger:_log - INFO - TeradataDatabase instance initialized
-[2025-09-01 20:11:23] - logger:_log - INFO - Operation 'Database connection' started - Details: {'host': 'iteration8-y5i5r3hcc15faku7.env.clearscape.teradata.com', 'database': 'demo_user'}
-[2025-09-01 20:11:28] - logger:_log - INFO - Operation 'Database connection' completed
-[2025-09-01 20:11:28] - logger:_log - INFO - Loading a CSV file of path `c:\internship\AMuRD-Iteration-8\data\train_val.csv`.
-[2025-09-01 20:11:28] - logger:_log - INFO - Loading a CSV file of path `c:\internship\AMuRD-Iteration-8\data\test.csv`.
-[2025-09-01 20:11:28] - logger:_log - INFO - Running the Amurd Pipeline.
-[2025-09-01 20:11:28] - logger:_log - INFO - Starting to evaluate embedding model.
-[2025-09-01 20:11:28] - logger:_log - INFO - Loading the embedding model
-[2025-09-01 20:11:28] - logger:_log - INFO - Loading embedding model.
-[2025-09-01 20:11:28] - SentenceTransformer:__init__ - INFO - Load pretrained SentenceTransformer: intfloat/multilingual-e5-large-instruct
-[2025-09-01 20:11:28] - connectionpool:_new_conn - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
-[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
-[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
-[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
-[2025-09-01 20:11:29] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/README.md HTTP/1.1" 307 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/README.md HTTP/1.1" 200 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_bert_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_roberta_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_distilbert_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:30] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_camembert_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_albert_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_xlm-roberta_config.json HTTP/1.1" 307 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/sentence_xlm-roberta_config.json HTTP/1.1" 200 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/adapter_config.json HTTP/1.1" 404 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config.json HTTP/1.1" 307 0
-[2025-09-01 20:11:31] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config.json HTTP/1.1" 200 0
-[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
-[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/tokenizer_config.json HTTP/1.1" 200 0
-[2025-09-01 20:11:32] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
-[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
-[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
-[2025-09-01 20:11:33] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct HTTP/1.1" 200 287673
-[2025-09-01 20:11:34] - logger:_log - INFO - Loading embeddings model is done.
-[2025-09-01 20:11:34] - logger:_log - INFO - Creating a new table `similarity_score` with columns `['product_id', 'class_id', 'cosine_distance']` on database `demo_user`.
-[2025-09-01 20:11:34] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': 'CREATE TABLE similarity_score (product_id BIGINT, class_id BIGINT, cosine_distance FLOAT);'}
-[2025-09-01 20:11:35] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:11:35] - logger:_log - INFO - Add classification to table `similarity_score`
-[2025-09-01 20:11:35] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    INSERT INTO similarity_score\n    WITH RankedDistances AS (\n        SELECT\n            o.Target_...'}
-[2025-09-01 20:12:13] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:20] - logger:_log - INFO - A sample from `similarity_score`:
-   product_id  class_id  cosine_distance
-0           2        15         0.160539
-1           8         3         0.117435
-2           1        15         0.153142
-3           3        40         0.147684
-4          11        21         0.203817
-[2025-09-01 20:12:20] - logger:_log - INFO - Create a new table `results`.
-[2025-09-01 20:12:20] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.results AS (\n        SELECT\n            p.id AS product_id,\n            ...'}
-[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': 'SELECT COUNT(class_name) FROM demo_user.classes'}
-[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 1}
-[2025-09-01 20:12:21] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    SELECT * FROM TD_ClassificationEvaluator (\n    ON results AS InputTable\n    OUT PERMANENT TABLE...'}
-[2025-09-01 20:12:22] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:25] - logger:_log - INFO - The scores of the model:
-   SeqNum              Metric  MetricValue
-0       1            Accuracy     0.323260
-1       2     Micro-Precision     0.323260
-2       3        Micro-Recall     0.323260
-3       4            Micro-F1     0.323260
-4       5     Macro-Precision     0.230708
-5       6        Macro-Recall     0.286951
-6       7            Macro-F1     0.160303
-7       8  Weighted-Precision     0.584377
-8       9     Weighted-Recall     0.323260
-9      10         Weighted-F1     0.376518
-[2025-09-01 20:12:25] - logger:_log - INFO - Evaluating embedding model is completed.
-[2025-09-01 20:12:25] - logger:_log - INFO - Evaluating tfidf classifier model.
-[2025-09-01 20:12:25] - logger:_log - INFO - Loading tfidf classifier model.
-[2025-09-01 20:12:25] - logger:_log - INFO - Loading tfidf classifier model is done.
-[2025-09-01 20:12:25] - logger:_log - INFO - Merging column(s) `product_id, class_name` of table `actual_classes_train` with column(s) `id` of table `classes`.
-[2025-09-01 20:12:25] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.actual_classes_train_new AS (\n        SELECT actual_classes_train.produc...'}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    DROP TABLE demo_user.actual_classes_train;'}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    RENAME TABLE demo_user.actual_classes_train_new TO actual_classes_train;'}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    ;'}
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:26] - logger:_log - INFO - Merging column(s) `product_id, class_name` of table `actual_classes_test` with column(s) `id` of table `classes`.
-[2025-09-01 20:12:26] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    CREATE TABLE demo_user.actual_classes_test_new AS (\n        SELECT actual_classes_test.product_...'}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    DROP TABLE demo_user.actual_classes_test;'}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    RENAME TABLE demo_user.actual_classes_test_new TO actual_classes_test;'}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' started - Details: {'query': '\n    ;'}
-[2025-09-01 20:12:27] - logger:_log - INFO - Operation 'Query execution' completed - Details: {'rows_returned': 0}
-[2025-09-01 20:12:42] - logger:_log - INFO - Training the model.
+[2025-09-03 12:22:13] - logger:_log - INFO - Logger initialized. Logs will be saved to C:\internship\AMuRD-Iteration-8\logs\log.txt
+[2025-09-03 12:22:14] - connectionpool:_new_conn - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[2025-09-03 12:22:15] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+[2025-09-03 12:22:16] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/7744afa8566e264af1a92a806d8d9aae00cc7c78/tokenizer_config.json HTTP/1.1" 200 0
+[2025-09-03 12:22:16] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+[2025-09-03 12:22:17] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/resolve/main/config.json HTTP/1.1" 307 0
+[2025-09-03 12:22:17] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/7744afa8566e264af1a92a806d8d9aae00cc7c78/config.json HTTP/1.1" 200 0
+[2025-09-03 12:22:17] - cextension:get_native_library - DEBUG - Loading bitsandbytes native library from: C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\libbitsandbytes_cuda118.dll
+[2025-09-03 12:22:21] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/resolve/main/generation_config.json HTTP/1.1" 307 0
+[2025-09-03 12:22:21] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/7744afa8566e264af1a92a806d8d9aae00cc7c78/generation_config.json HTTP/1.1" 200 0
+[2025-09-03 12:22:22] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+[2025-09-03 12:22:22] - logger:_log - INFO - TeradataDatabase instance initialized
+[2025-09-03 12:22:22] - logger:_log - INFO - Operation 'Database connection' started - Details: {'host': 'iteration6-72i0y48cfm1eb812.env.clearscape.teradata.com', 'database': 'demo_user'}
+[2025-09-03 12:22:28] - logger:_log - INFO - Operation 'Database connection' completed
+[2025-09-03 12:22:52] - logger:flush - ERROR -   0%|                                                                                                                             | 0/274 [00:00<?, ?it/s]
+[2025-09-03 12:23:09] - logger:flush - ERROR -   0%|4                                                                                                                  | 1/274 [00:16<1:16:03, 16.72s/it]
+[2025-09-03 12:23:19] - logger:flush - ERROR -   1%|8                                                                                                                    | 2/274 [00:27<59:32, 13.13s/it]
+[2025-09-03 12:23:32] - logger:flush - ERROR -   1%|#2                                                                                                                   | 3/274 [00:40<58:44, 13.01s/it]
+[2025-09-03 12:23:51] - logger:flush - ERROR -   1%|#6                                                                                                                 | 4/274 [00:58<1:08:09, 15.15s/it]
+[2025-09-03 12:24:03] - logger:flush - ERROR -   2%|##                                                                                                                 | 5/274 [01:11<1:04:19, 14.35s/it]
+[2025-09-03 12:24:23] - logger:flush - ERROR -   2%|##5                                                                                                                | 6/274 [01:31<1:12:35, 16.25s/it]
+[2025-09-03 12:25:07] - logger:flush - ERROR -   3%|##9                                                                                                                | 7/274 [02:14<1:51:49, 25.13s/it]
+[2025-09-03 12:25:22] - logger:flush - ERROR -   3%|###3                                                                                                               | 8/274 [02:30<1:37:17, 21.95s/it]
+[2025-09-03 12:25:37] - logger:flush - ERROR -   3%|###7                                                                                                               | 9/274 [02:44<1:27:00, 19.70s/it]
+[2025-09-03 12:25:50] - logger:flush - ERROR -   4%|####1                                                                                                             | 10/274 [02:58<1:17:51, 17.69s/it]
+[2025-09-03 12:26:04] - logger:flush - ERROR -   4%|####5                                                                                                             | 11/274 [03:11<1:12:25, 16.52s/it]
+[2025-09-03 12:26:07] - logger:flush - ERROR -   4%|####5                                                                                                             | 11/274 [03:14<1:17:40, 17.72s/it]
+[2025-09-03 12:26:07] - logger:write - ERROR - Traceback (most recent call last):
+[2025-09-03 12:26:07] - logger:write - ERROR -   File "c:\internship\AMuRD-Iteration-8\src\label_data.py", line 37, in <module>
+[2025-09-03 12:26:07] - logger:write - ERROR - main()  File "c:\internship\AMuRD-Iteration-8\src\label_data.py", line 32, in main
+[2025-09-03 12:26:07] - logger:write - ERROR - df_labeled = label_products(df_sample, agent, "translated_name")^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "c:\internship\AMuRD-Iteration-8\src\label_data.py", line 15, in label_products
+[2025-09-03 12:26:07] - logger:write - ERROR - result = agent.classify(row[product_col])^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "c:\internship\AMuRD-Iteration-8\src\gpc_agent.py", line 204, in classify
+[2025-09-03 12:26:07] - logger:write - ERROR - result = self.agent.invoke({"product_description": processed_name})^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\pregel\main.py", line 3026, in invoke
+[2025-09-03 12:26:07] - logger:write - ERROR - for chunk in self.stream(^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\pregel\main.py", line 2647, in stream
+[2025-09-03 12:26:07] - logger:write - ERROR - for _ in runner.tick(^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\pregel\_runner.py", line 162, in tick
+[2025-09-03 12:26:07] - logger:write - ERROR - run_with_retry(  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+[2025-09-03 12:26:07] - logger:write - ERROR - return task.proc.invoke(task.input, config)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\_internal\_runnable.py", line 657, in invoke
+[2025-09-03 12:26:07] - logger:write - ERROR - input = context.run(step.invoke, input, config, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\langgraph\_internal\_runnable.py", line 401, in invoke
+[2025-09-03 12:26:07] - logger:write - ERROR - ret = self.func(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^  File "c:\internship\AMuRD-Iteration-8\src\gpc_agent.py", line 118, in _family_node
+[2025-09-03 12:26:07] - logger:write - ERROR - state["family"] = self._classify_node(state["product_description"], candidates)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "c:\internship\AMuRD-Iteration-8\src\gpc_agent.py", line 161, in _classify_node
+[2025-09-03 12:26:07] - logger:write - ERROR - output_ids = self.model.generate(**inputs, max_new_tokens=100)[0][len(inputs.input_ids[0]):] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+[2025-09-03 12:26:07] - logger:write - ERROR - return func(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\generation\utils.py", line 2617, in generate
+[2025-09-03 12:26:07] - logger:write - ERROR - result = self._sample(^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\generation\utils.py", line 3598, in _sample
+[2025-09-03 12:26:07] - logger:write - ERROR - outputs = self(**model_inputs, return_dict=True)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._call_impl(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return forward_call(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\utils\generic.py", line 959, in wrapper
+[2025-09-03 12:26:07] - logger:write - ERROR - output = func(self, *args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 481, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - outputs: BaseModelOutputWithPast = self.model(^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._call_impl(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return forward_call(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\utils\generic.py", line 1083, in wrapper
+[2025-09-03 12:26:07] - logger:write - ERROR - outputs = func(self, *args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 405, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - hidden_states = decoder_layer(^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\modeling_layers.py", line 93, in __call__
+[2025-09-03 12:26:07] - logger:write - ERROR - return super().__call__(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._call_impl(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return forward_call(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 272, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - hidden_states = self.mlp(hidden_states)^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._call_impl(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return forward_call(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 81, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._call_impl(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - return forward_call(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\nn\modules.py", line 565, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - return bnb.matmul_4bit(x, weight, bias=bias, quant_state=self.weight.quant_state).to(inp_dtype)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 466, in matmul_4bit
+[2025-09-03 12:26:07] - logger:write - ERROR - return MatMul4Bit.apply(A, B, out, bias, quant_state)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\autograd\function.py", line 575, in apply
+[2025-09-03 12:26:07] - logger:write - ERROR - return super().apply(*args, **kwargs)  # type: ignore[misc]^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\autograd\_functions.py", line 380, in forward
+[2025-09-03 12:26:07] - logger:write - ERROR - output = torch.nn.functional.linear(A, F.dequantize_4bit(B, quant_state).to(A.dtype).t(), bias)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\functional.py", line 983, in dequantize_4bit
+[2025-09-03 12:26:07] - logger:write - ERROR - absmax = dequantize_blockwise(quant_state.absmax, quant_state.state2)^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\functional.py", line 708, in dequantize_blockwise
+[2025-09-03 12:26:07] - logger:write - ERROR - return torch.ops.bitsandbytes.dequantize_blockwise.default(^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\_ops.py", line 756, in __call__
+[2025-09-03 12:26:07] - logger:write - ERROR - return self._op(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\_compile.py", line 51, in inner
+[2025-09-03 12:26:07] - logger:write - ERROR - return disable_fn(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\_dynamo\eval_frame.py", line 838, in _fn
+[2025-09-03 12:26:07] - logger:write - ERROR - return fn(*args, **kwargs)^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\torch\library.py", line 719, in func_no_dynamo
+[2025-09-03 12:26:07] - logger:write - ERROR - return func(*args, **kwargs)^^^^^^^^^^^^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\backends\cuda\ops.py", line 251, in _
+[2025-09-03 12:26:07] - logger:write - ERROR - _dequantize_blockwise_impl(A, absmax, code, blocksize, dtype, out=out)  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\backends\cuda\ops.py", line 286, in _dequantize_blockwise_impl
+[2025-09-03 12:26:07] - logger:write - ERROR - get_ptr(A),^^^^^^^^^^  File "C:\Users\os255022\AppData\Local\anaconda3\envs\iteration8\Lib\site-packages\bitsandbytes\functional.py", line 389, in get_ptr
+[2025-09-03 12:26:07] - logger:flush - ERROR - return ct.c_void_p(A.data_ptr())^^^^^^^^^^^^KeyboardInterrupt

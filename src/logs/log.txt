@@ -1,0 +1,360 @@
+[2025-09-02 19:00:35] - logger:_log - INFO - Logger initialized. Logs will be saved to c:\internship\AMuRD-Iteration-8\src\logs\log.txt
+[2025-09-02 19:00:41] - logger:_log - INFO - TeradataDatabase instance initialized
+[2025-09-02 19:00:41] - logger:_log - INFO - Operation 'Database connection' started - Details: {'host': 'iteration6-72i0y48cfm1eb812.env.clearscape.teradata.com', 'database': 'demo_user'}
+[2025-09-02 19:00:46] - logger:_log - INFO - Operation 'Database connection' completed
+[2025-09-02 19:01:02] - SentenceTransformer:__init__ - INFO - Load pretrained SentenceTransformer: intfloat/multilingual-e5-large-instruct
+[2025-09-02 19:01:02] - connectionpool:_new_conn - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[2025-09-02 19:01:02] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-02 19:01:02] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-02 19:01:02] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-02 19:01:02] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/README.md HTTP/1.1" 307 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/README.md HTTP/1.1" 200 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_bert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_roberta_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:03] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_distilbert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_camembert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_albert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_xlm-roberta_config.json HTTP/1.1" 307 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/sentence_xlm-roberta_config.json HTTP/1.1" 200 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/adapter_config.json HTTP/1.1" 404 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config.json HTTP/1.1" 307 0
+[2025-09-02 19:01:04] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config.json HTTP/1.1" 200 0
+[2025-09-02 19:01:05] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+[2025-09-02 19:01:05] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/tokenizer_config.json HTTP/1.1" 200 0
+[2025-09-02 19:01:05] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+[2025-09-02 19:01:06] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+[2025-09-02 19:01:06] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+[2025-09-02 19:01:07] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct HTTP/1.1" 200 287673
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 1: loss = 15.7258
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 2: loss = 18.8908
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 3: loss = 17.5741
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 4: loss = 60.4681
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 5: loss = 20.5789
+[2025-09-02 19:02:45] - logger:_log - INFO - Epoch 6: loss = 15.7557
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 7: loss = 15.0841
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 8: loss = 14.5888
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 9: loss = 14.3001
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 10: loss = 14.0387
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 11: loss = 13.8332
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 12: loss = 13.6572
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 13: loss = 13.5113
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 14: loss = 13.4075
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 15: loss = 13.3330
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 16: loss = 13.2511
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 17: loss = 13.1325
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 18: loss = 12.9963
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 19: loss = 12.8690
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 20: loss = 12.7401
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 21: loss = 12.5962
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 22: loss = 12.4464
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 23: loss = 12.2962
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 24: loss = 12.1431
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 25: loss = 11.9893
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 26: loss = 11.8309
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 27: loss = 11.6823
+[2025-09-02 19:02:46] - logger:_log - INFO - Epoch 28: loss = 11.5353
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 29: loss = 11.3782
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 30: loss = 11.2283
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 31: loss = 11.0815
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 32: loss = 10.9382
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 33: loss = 10.7903
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 34: loss = 10.6476
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 35: loss = 10.5044
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 36: loss = 10.3612
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 37: loss = 10.2178
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 38: loss = 10.0738
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 39: loss = 9.9262
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 40: loss = 9.7782
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 41: loss = 9.6280
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 42: loss = 9.4760
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 43: loss = 9.3213
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 44: loss = 9.1658
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 45: loss = 9.0070
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 46: loss = 8.8454
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 47: loss = 8.6808
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 48: loss = 8.5143
+[2025-09-02 19:02:47] - logger:_log - INFO - Epoch 49: loss = 8.3458
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 50: loss = 8.1757
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 51: loss = 8.0041
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 52: loss = 7.8318
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 53: loss = 7.6570
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 54: loss = 7.4817
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 55: loss = 7.3078
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 56: loss = 7.1339
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 57: loss = 6.9635
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 58: loss = 6.7967
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 59: loss = 6.6456
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 60: loss = 6.4863
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 61: loss = 6.3312
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 62: loss = 6.1744
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 63: loss = 6.0457
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 64: loss = 5.9591
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 65: loss = 5.8466
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 66: loss = 5.6891
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 67: loss = 5.6142
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 68: loss = 5.4804
+[2025-09-02 19:02:48] - logger:_log - INFO - Epoch 69: loss = 5.4551
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 70: loss = 5.3387
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 71: loss = 5.1959
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 72: loss = 5.0975
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 73: loss = 5.0646
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 74: loss = 4.9280
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 75: loss = 4.8059
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 76: loss = 4.7254
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 77: loss = 4.6243
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 78: loss = 4.4917
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 79: loss = 4.3546
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 80: loss = 4.2220
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 81: loss = 4.0750
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 82: loss = 3.9265
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 83: loss = 3.8842
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 84: loss = 3.7972
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 85: loss = 3.6700
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 86: loss = 3.5756
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 87: loss = 3.4901
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 88: loss = 3.4258
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 89: loss = 3.3550
+[2025-09-02 19:02:49] - logger:_log - INFO - Epoch 90: loss = 3.2865
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 91: loss = 3.2117
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 92: loss = 3.1361
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 93: loss = 3.0692
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 94: loss = 2.9981
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 95: loss = 2.9290
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 96: loss = 2.8704
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 97: loss = 2.8143
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 98: loss = 2.7543
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 99: loss = 2.6953
+[2025-09-02 19:02:50] - logger:_log - INFO - Epoch 100: loss = 2.6420
+[2025-09-02 19:05:02] - logger:_log - INFO - Epoch 1: loss = 15.7433
+[2025-09-02 19:05:02] - logger:_log - INFO - Epoch 2: loss = 20.5554
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 3: loss = 16.1047
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 4: loss = 52.2441
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 5: loss = 16.9519
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 6: loss = 15.7976
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 7: loss = 14.6419
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 8: loss = 14.3434
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 9: loss = 14.0697
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 10: loss = 14.1227
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 11: loss = 13.8821
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 12: loss = 13.6192
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 13: loss = 13.6301
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 14: loss = 13.4483
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 15: loss = 13.2440
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 16: loss = 13.2046
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 17: loss = 13.0891
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 18: loss = 12.8862
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 19: loss = 12.7582
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 20: loss = 12.6468
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 21: loss = 12.4770
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 22: loss = 12.3626
+[2025-09-02 19:05:03] - logger:_log - INFO - Epoch 23: loss = 12.2263
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 24: loss = 12.0468
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 25: loss = 11.9070
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 26: loss = 11.7633
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 27: loss = 11.6030
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 28: loss = 11.4480
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 29: loss = 11.2906
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 30: loss = 11.1529
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 31: loss = 11.0196
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 32: loss = 10.8762
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 33: loss = 10.7339
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 34: loss = 10.5937
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 35: loss = 10.4558
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 36: loss = 10.3182
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 37: loss = 10.1754
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 38: loss = 10.0306
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 39: loss = 9.8846
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 40: loss = 9.7390
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 41: loss = 9.5948
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 42: loss = 9.4463
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 43: loss = 9.2921
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 44: loss = 9.1383
+[2025-09-02 19:05:04] - logger:_log - INFO - Epoch 45: loss = 8.9859
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 46: loss = 8.8268
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 47: loss = 8.6672
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 48: loss = 8.5064
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 49: loss = 8.3446
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 50: loss = 8.1778
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 51: loss = 8.0117
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 52: loss = 7.8444
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 53: loss = 7.6754
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 54: loss = 7.5065
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 55: loss = 7.3376
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 56: loss = 7.1705
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 57: loss = 7.0025
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 58: loss = 6.8387
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 59: loss = 6.6749
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 60: loss = 6.5207
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 61: loss = 6.3582
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 62: loss = 6.2053
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 63: loss = 6.0472
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 64: loss = 5.9063
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 65: loss = 5.7601
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 66: loss = 5.6336
+[2025-09-02 19:05:05] - logger:_log - INFO - Epoch 67: loss = 5.4943
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 68: loss = 5.3632
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 69: loss = 5.3013
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 70: loss = 5.1668
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 71: loss = 5.0563
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 72: loss = 4.9326
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 73: loss = 4.8336
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 74: loss = 4.7963
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 75: loss = 4.6745
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 76: loss = 4.6105
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 77: loss = 4.4848
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 78: loss = 4.4187
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 79: loss = 4.3215
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 80: loss = 4.2490
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 81: loss = 4.1327
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 82: loss = 4.0112
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 83: loss = 3.8402
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 84: loss = 3.7683
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 85: loss = 3.7021
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 86: loss = 3.5906
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 87: loss = 3.5092
+[2025-09-02 19:05:06] - logger:_log - INFO - Epoch 88: loss = 3.4305
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 89: loss = 3.3571
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 90: loss = 3.2772
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 91: loss = 3.2129
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 92: loss = 3.1284
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 93: loss = 3.0502
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 94: loss = 2.9880
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 95: loss = 2.9289
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 96: loss = 2.8698
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 97: loss = 2.8124
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 98: loss = 2.7487
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 99: loss = 2.6931
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 100: loss = 2.6390
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 101: loss = 2.5863
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 102: loss = 2.5377
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 103: loss = 2.4873
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 104: loss = 2.4403
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 105: loss = 2.3950
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 106: loss = 2.3484
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 107: loss = 2.3019
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 108: loss = 2.2588
+[2025-09-02 19:05:07] - logger:_log - INFO - Epoch 109: loss = 2.2182
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 110: loss = 2.1793
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 111: loss = 2.1387
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 112: loss = 2.0984
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 113: loss = 2.0615
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 114: loss = 2.0258
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 115: loss = 1.9901
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 116: loss = 1.9545
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 117: loss = 1.9206
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 118: loss = 1.8883
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 119: loss = 1.8566
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 120: loss = 1.8241
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 121: loss = 1.7922
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 122: loss = 1.7632
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 123: loss = 1.7342
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 124: loss = 1.7051
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 125: loss = 1.6767
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 126: loss = 1.6494
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 127: loss = 1.6230
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 128: loss = 1.5963
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 129: loss = 1.5703
+[2025-09-02 19:05:08] - logger:_log - INFO - Epoch 130: loss = 1.5451
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 131: loss = 1.5210
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 132: loss = 1.4969
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 133: loss = 1.4732
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 134: loss = 1.4502
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 135: loss = 1.4282
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 136: loss = 1.4060
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 137: loss = 1.3845
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 138: loss = 1.3632
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 139: loss = 1.3431
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 140: loss = 1.3234
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 141: loss = 1.3035
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 142: loss = 1.2852
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 143: loss = 1.2665
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 144: loss = 1.2487
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 145: loss = 1.2333
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 146: loss = 1.2147
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 147: loss = 1.1980
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 148: loss = 1.1802
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 149: loss = 1.1631
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 150: loss = 1.1472
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 151: loss = 1.1313
+[2025-09-02 19:05:09] - logger:_log - INFO - Epoch 152: loss = 1.1163
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 153: loss = 1.1018
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 154: loss = 1.0868
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 155: loss = 1.0707
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 156: loss = 1.0564
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 157: loss = 1.0414
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 158: loss = 1.0285
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 159: loss = 1.0142
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 160: loss = 1.0032
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 161: loss = 0.9901
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 162: loss = 0.9781
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 163: loss = 0.9651
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 164: loss = 0.9543
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 165: loss = 0.9404
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 166: loss = 0.9261
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 167: loss = 0.9170
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 168: loss = 0.9034
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 169: loss = 0.8927
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 170: loss = 0.8829
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 171: loss = 0.8709
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 172: loss = 0.8614
+[2025-09-02 19:05:10] - logger:_log - INFO - Epoch 173: loss = 0.8492
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 174: loss = 0.8384
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 175: loss = 0.8297
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 176: loss = 0.8184
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 177: loss = 0.8098
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 178: loss = 0.7998
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 179: loss = 0.7908
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 180: loss = 0.7827
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 181: loss = 0.7746
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 182: loss = 0.7652
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 183: loss = 0.7574
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 184: loss = 0.7469
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 185: loss = 0.7389
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 186: loss = 0.7301
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 187: loss = 0.7210
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 188: loss = 0.7120
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 189: loss = 0.7068
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 190: loss = 0.6966
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 191: loss = 0.6886
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 192: loss = 0.6860
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 193: loss = 0.6764
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 194: loss = 0.6707
+[2025-09-02 19:05:11] - logger:_log - INFO - Epoch 195: loss = 0.6644
+[2025-09-02 19:05:12] - logger:_log - INFO - Epoch 196: loss = 0.6584
+[2025-09-02 19:05:12] - logger:_log - INFO - Epoch 197: loss = 0.6517
+[2025-09-02 19:05:12] - logger:_log - INFO - Epoch 198: loss = 0.6454
+[2025-09-02 19:05:12] - logger:_log - INFO - Epoch 199: loss = 0.6383
+[2025-09-02 19:05:12] - logger:_log - INFO - Epoch 200: loss = 0.6314
+[2025-09-02 19:06:48] - SentenceTransformer:__init__ - INFO - Load pretrained SentenceTransformer: intfloat/multilingual-e5-large-instruct
+[2025-09-02 19:06:48] - connectionpool:_get_conn - DEBUG - Resetting dropped connection: huggingface.co
+[2025-09-02 19:06:48] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-02 19:06:48] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-02 19:06:48] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-02 19:06:48] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config_sentence_transformers.json HTTP/1.1" 200 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/README.md HTTP/1.1" 307 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/README.md HTTP/1.1" 200 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/modules.json HTTP/1.1" 307 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/modules.json HTTP/1.1" 200 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_bert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:49] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_roberta_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_distilbert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_camembert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_albert_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/sentence_xlm-roberta_config.json HTTP/1.1" 307 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/sentence_xlm-roberta_config.json HTTP/1.1" 200 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/adapter_config.json HTTP/1.1" 404 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/config.json HTTP/1.1" 307 0
+[2025-09-02 19:06:50] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/config.json HTTP/1.1" 200 0
+[2025-09-02 19:06:51] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+[2025-09-02 19:06:51] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/tokenizer_config.json HTTP/1.1" 200 0
+[2025-09-02 19:06:51] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+[2025-09-02 19:06:52] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /intfloat/multilingual-e5-large-instruct/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+[2025-09-02 19:06:52] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/intfloat/multilingual-e5-large-instruct/274baa43b0e13e37fafa6428dbc7938e62e5c439/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+[2025-09-02 19:06:54] - connectionpool:_make_request - DEBUG - https://huggingface.co:443 "GET /api/models/intfloat/multilingual-e5-large-instruct HTTP/1.1" 200 287673

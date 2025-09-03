@@ -167,7 +167,7 @@ def gpc_hierarchical_classifier_train(model: GpcHierarchicalClassifier, x_train 
 
 def gpc_hierarchical_classifier_inference(model: GpcHierarchicalClassifier, x: Union[List[float], np.ndarray, torch.Tensor]):
     if not isinstance(x, torch.Tensor):
-        x = torch.tensor()
+        x = torch.tensor(x, dtype=model.dtype, device=model.device)
     
     with torch.inference_mode():
         logits = model(x)
@@ -188,11 +188,3 @@ def save_model(model: GpcHierarchicalClassifier) -> None:
     state_dict = model.state_dict()
 
     save_file(state_dict, model_path)
-
-def classify_product(product_name: str, agent, translation_model = None):
-    """Translate and classify product using the agent."""
-    if translation_model is not None:
-        product_name = translation_model.translate(product_name).lower()
-        
-    result = agent.invoke({"product_description": product_name})
-    return result
