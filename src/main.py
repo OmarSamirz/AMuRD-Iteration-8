@@ -1,5 +1,5 @@
 
-from modules.pipelines import AmurdPipeline, GpcPipeline
+from pipelines import AmurdPipeline, GpcPipeline
 from constants import (
     GPC_PATH,
     TRAIN_VAL_DATA_PATH,

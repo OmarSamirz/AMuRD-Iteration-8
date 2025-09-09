@@ -8,6 +8,7 @@ from langid import classify
 from sklearn.pipeline import Pipeline
 from sklearn.dummy import DummyClassifier
 from sklearn.multioutput import MultiOutputClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sentence_transformers import SentenceTransformer
 from transformers import MarianMTModel, MarianTokenizer
@@ -63,8 +64,6 @@ class GpcHierarchicalClassifier(nn.Module):
 
         self.brick_input_dim = config.embedding_size + config.segment_num_classes + config.family_num_classes + config.class_num_classes
         self.brick_head = nn.Linear(self.brick_input_dim, config.brick_num_classes, bias=False)
-
-
 
     def forward(self, x: Tensor) -> Dict[str, Tensor]:
         shared = self.shared_head(x)
@@ -324,34 +323,28 @@ class EmbeddingXGBoostModel:
             eval_metric=config.eval_metric,
             random_state=RANDOM_STATE,
         )
-        self.clf = None
 
     def fit(self, X_train, y_train):
         embeddings = self.embedding_model.get_embeddings(X_train)
-        self.clf = MultiOutputClassifier(self.xgb_model)
-        self.clf.fit(embeddings, y_train)
+        # self.clf = MultiOutputClassifier(self.xgb_model)
+        self.xgb_model.fit(embeddings, y_train)
 
     def predict(self, x):
         embeddings = self.embedding_model.get_embeddings(x)
         if embeddings.ndim == 1:
             embeddings = embeddings.reshape(1, -1)
-        return self.clf.predict(embeddings)
+        return self.xgb_model.predict(embeddings)
     
     def save(self) -> None:
-        if self.clf is None:
-            raise ValueError("You need to fit the model first.")
         if not os.path.exists(MODEL_PATH):
             os.makedirs(MODEL_PATH, exist_ok=True)
 
         model_path = MODEL_PATH / self.model_name
-        joblib.dump(self.clf, model_path)
+        joblib.dump(self.xgb_model, model_path)
 
     def load(self) -> None:
-        if self.clf is not None:
-            return
-
         model_path = MODEL_PATH / self.model_name
-        self.clf = joblib.load(model_path)
+        self.xgb_model = joblib.load(model_path)
 
 
 @dataclass

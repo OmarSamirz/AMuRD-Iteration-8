@@ -4,7 +4,7 @@ from typing_extensions import override
 from typing import Optional, List, Union, Dict, Any
 
 from modules.logger import logger
-from modules.pipelines.pipeline import Pipeline
+from pipelines.pipeline import Pipeline
 from queries import (
     create_table_query,
     classification_query, 
@@ -371,6 +371,7 @@ class AmurdPipeline(Pipeline):
         df_scores = self.get_table("tfidf_scores")
         logger.info(f"The scores of tfidf classifer model: {df_scores}")
 
+        logger.info("Saving the model.")
         self.tfidf_classifier.save()
 
     def update_table_columns(

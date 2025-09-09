@@ -4,7 +4,7 @@ from typing_extensions import override
 from typing import Optional, Dict, List, Any, Union
 
 from modules.logger import logger
-from modules.pipelines.pipeline import Pipeline
+from pipelines.pipeline import Pipeline
 from queries import combine_columns_query, create_table_from_query, create_unique_table_from_query
 
 
@@ -310,18 +310,18 @@ class GpcPipeline(Pipeline):
         self.create_embeddings("gpc_products", "translated_product_name", "product_embeddings")
         self.create_embeddings("gpc_train", "classes_definition", "gpc_train_embeddings")
 
-        # self.create_unique_table_from("gpc_segment", "gpc", "id", "SegmentTitle", "SegmentTitle")
-        # self.create_embeddings("gpc_segment", "SegmentTitle", "gpc_segment_embeddings")
-        # self.drop_table("gpc_segment")
+        self.create_unique_table_from("gpc_segment", "gpc", "id", "SegmentTitle", "SegmentTitle")
+        self.create_embeddings("gpc_segment", "SegmentTitle", "gpc_segment_embeddings")
+        self.drop_table("gpc_segment")
 
-        # self.create_unique_table_from("gpc_family", "gpc", "id", "FamilyTitle", "FamilyTitle")
-        # self.create_embeddings("gpc_family", "FamilyTitle", "gpc_family_embeddings")
-        # self.drop_table("gpc_family")
+        self.create_unique_table_from("gpc_family", "gpc", "id", "FamilyTitle", "FamilyTitle")
+        self.create_embeddings("gpc_family", "FamilyTitle", "gpc_family_embeddings")
+        self.drop_table("gpc_family")
 
-        # self.create_unique_table_from("gpc_class", "gpc", "id", "ClassTitle", "ClassTitle")
-        # self.create_embeddings("gpc_class", "ClassTitle", "gpc_class_embeddings")
-        # self.drop_table("gpc_class")
+        self.create_unique_table_from("gpc_class", "gpc", "id", "ClassTitle", "ClassTitle")
+        self.create_embeddings("gpc_class", "ClassTitle", "gpc_class_embeddings")
+        self.drop_table("gpc_class")
 
-        # self.create_unique_table_from("gpc_brick", "gpc", "id", "BrickTitle", "BrickTitle")
-        # self.create_embeddings("gpc_brick", "BrickTitle", "gpc_brick_embeddings")
-        # self.drop_table("gpc_brick")
+        self.create_unique_table_from("gpc_brick", "gpc", "id", "BrickTitle", "BrickTitle")
+        self.create_embeddings("gpc_brick", "BrickTitle", "gpc_brick_embeddings")
+        self.drop_table("gpc_brick")

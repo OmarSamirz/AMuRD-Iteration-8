@@ -8,7 +8,7 @@
         "truncate_dim": null
     },
     "xgb_config": {
-        "model_name": "gpc_embedding_xgb.joblib",
+        "model_name": "embedding_xgb.joblib",
         "n_estimators": 500,
         "learning_rate": 0.1,
         "max_depth": 6,

@@ -24,7 +24,7 @@ from modules.models import (
     EmbeddingXGBoostConfig,
     EmbeddingXGBoostModel,
     GpcHierarchicalClassifierConfig,
-    GpcHierarchicalClassifier
+    GpcHierarchicalClassifier,
 )
 
 def evaluation_score(y_true: List[str], y_pred: List[str], average: str) -> float:

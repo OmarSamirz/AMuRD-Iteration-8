@@ -297,7 +297,7 @@ class Pipeline(ABC):
     def load_tfidf_model(self) -> None:
         if self.tfidf_classifier is not None:
             logger.info("The tfidf classifier model is loaded.")
-            return 
+            return
         if self.tfidf_classifier_config_path is None:
             raise ValueError(f"You need to set a value for `tfidf_classifier_config_path` to use this function.")
         
